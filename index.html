@@ -1,3 +1,98 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10131e"><title>Ergin Lab — Mini Web Deneyleri</title><style>
-:root{color-scheme:dark;--bg:#0b0e17;--panel:#151a29;--line:#2a3147;--text:#f3f5ff;--muted:#a1abc4;--lime:#b9f27c;--violet:#aaa0ff}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#25334d 0,transparent 38%),var(--bg);color:var(--text);font:16px/1.5 system-ui,sans-serif}main{width:min(1050px,calc(100% - 36px));margin:auto;padding:70px 0}.top{display:flex;justify-content:space-between;align-items:center;gap:20px}.logo{font-weight:900;letter-spacing:.13em;font-size:.8rem}.status{color:var(--lime);font-size:.8rem}.hero{padding:80px 0 55px}.eyebrow{color:var(--lime);font-size:.78rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase}.hero h1{font-size:clamp(3rem,9vw,6.5rem);letter-spacing:-.08em;line-height:.98;margin:16px 0 24px;max-width:800px}.hero h1 span{color:var(--violet)}.hero p{max-width:600px;color:var(--muted);font-size:1.1rem}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{display:flex;flex-direction:column;min-height:245px;padding:26px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,#1a2031,#121724);text-decoration:none;color:inherit;transition:transform .18s,border-color .18s}.card:hover{transform:translateY(-4px);border-color:#7275a6}.num{color:var(--lime);font-size:.76rem;letter-spacing:.15em;font-weight:800}.card h2{font-size:1.65rem;letter-spacing:-.04em;margin:18px 0 8px}.card p{color:var(--muted);margin:0 0 22px}.launch{margin-top:auto;color:var(--violet);font-weight:750}.foot{border-top:1px solid var(--line);margin-top:42px;padding-top:22px;color:#7e8aa8;font-size:.85rem;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}@media(max-width:650px){main{padding-top:30px}.hero{padding:60px 0 36px}.grid{grid-template-columns:1fr}.card{min-height:205px}}
-</style></head><body><main><header class="top"><div class="logo">EK / ERGIN LAB</div><div class="status">● MINI EXPERIMENTS / 001—004</div></header><section class="hero"><div class="eyebrow">Small ideas, working prototypes.</div><h1>Merak et.<br><span>Deney yap.</span></h1><p>JavaScript ve web teknolojileriyle hazırladığım küçük deneyler. Her proje bir özelliği test etmek, bozup yeniden yapmak ve yeni bir şey öğrenmek için var.</p></section><section class="grid"><a class="card" href="taskflow/index.html"><div class="num">EXPERIMENT 001 / STORAGE</div><h2>Taskflow</h2><p>Görev ekle, tamamla, filtrele. Liste tarayıcıda saklanır; sayfayı kapatınca kaybolmaz.</p><div class="launch">Projeyi aç ↗</div></a><a class="card" href="calc-lab/index.html"><div class="num">EXPERIMENT 002 / INPUT</div><h2>Calc Lab</h2><p>Dört işlem yapan küçük hesap makinesi. Fare ve klavye girişlerini aynı mantıkta ele alır.</p><div class="launch">Projeyi aç ↗</div></a><a class="card" href="skyline/index.html"><div class="num">EXPERIMENT 003 / API</div><h2>Skyline</h2><p>Şehir adına göre canlı hava durumu verisi çeker. API isteği ve hata durumlarını gösterir.</p><div class="launch">Projeyi aç ↗</div></a><a class="card" href="tempo/index.html"><div class="num">EXPERIMENT 004 / TIME</div><h2>Tempo</h2><p>Başlat, duraklat, devam et ve tur kaydet. Geçen süreyi birikimli olarak hesaplar.</p><div class="launch">Projeyi aç ↗</div></a></section><footer class="foot"><span>ERGIN LAB · PERSONAL LEARNING PROJECTS</span><span>Built to learn, not to look finished.</span></footer></main></body></html>
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a100f">
+<meta name="description" content="Ergin Lab — merak, küçük deneyler ve çalışan prototipler.">
+<title>Ergin Lab — Merakın çalışma masası</title>
+<link rel="stylesheet" href="assets/lab.css">
+</head>
+<body>
+<div class="noise" aria-hidden="true"></div>
+<header class="topbar">
+  <a class="brand" href="./" aria-label="Ergin Lab ana sayfa"><span class="brand-mark">E<span>·</span></span><span>ERGIN <b>LAB</b><small>PERSONAL EXPERIMENTS / 2026</small></span></a>
+  <nav><a href="#experiments">Deneyler</a><a href="#bench">Çalışma masası</a><a href="#fieldnotes">Not defteri</a></nav>
+  <div class="status"><i></i> SİSTEM ÇALIŞIYOR</div>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="eyebrow-line"></span> MERAK AÇIK · SONUÇLAR BELİRSİZ</div>
+    <h1>Bir şeyleri<br><em>kurcala.</em></h1>
+    <p class="hero-lede">Burası bitmiş ürünler vitrini değil. Küçük soruların çalışan prototiplere, beklenmedik sonuçların yeni sorulara dönüştüğü kişisel bir laboratuvar.</p>
+    <div class="hero-actions"><a class="button primary" href="#experiments">Deneylere gir <span>↘</span></a><a class="text-link" href="#manifesto">Laboratuvarın amacı <span>↗</span></a></div>
+    <div class="hero-meta"><span><b>04</b> AKTİF DENEY</span><span><b>∞</b> SORU</span><span><b>0</b> KESİN CEVAP</span></div>
+  </div>
+  <div class="hero-visual" aria-label="Laboratuvarın stilize edilmiş kontrol paneli">
+    <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="core"><span>?</span></div>
+    <div class="scanline"></div><div class="readout readout-top"><small>LAB / SENSOR 001</small><b id="liveClock">00:00:00</b><span>LOCAL OBSERVATION</span></div>
+    <div class="readout readout-bottom"><span class="pulse"></span><small>MERAK SEVİYESİ</small><b id="curiosity">87.4</b><span>↑ READY TO EXPLORE</span></div>
+    <div class="crosshair crosshair-one">+</div><div class="crosshair crosshair-two">+</div>
+    <div class="visual-label">FIG. 01 <span>UNKNOWN SYSTEM / NOT TO SCALE</span></div>
+  </div>
+</section>
+<div class="ticker"><div>TEST ET <span>✳</span> GÖZLEMLE <span>✳</span> YANIL <span>✳</span> YENİDEN DENE <span>✳</span> TEST ET <span>✳</span> GÖZLEMLE <span>✳</span> YANIL <span>✳</span> YENİDEN DENE <span>✳</span></div></div>
+
+<section class="section" id="experiments">
+  <div class="section-head"><div><div class="eyebrow">01 / DENEY KATALOĞU</div><h2>Kurcalamak için<br><em>bir sebep.</em></h2></div><p>Bir tahmin yap. Düğmeye bas. Sonucun sezgine uyup uymadığına bak.</p></div>
+  <div class="filter-row"><span>GÖSTERİLEN DENEYLER <b id="resultCount">04</b></span><div class="filters"><button class="filter active" data-filter="all">Tümü</button><button class="filter" data-filter="mind">Zihin</button><button class="filter" data-filter="physics">Fizik</button><button class="filter" data-filter="code">Kod</button></div></div>
+  <div class="experiment-grid">
+    <article class="experiment-card featured" data-kind="mind">
+      <div class="card-art art-bias"><div class="bias-circle"></div><div class="bias-line"></div><span class="art-index">EXP / 001</span><span class="art-stamp">PERCEPTION</span></div>
+      <div class="card-content"><div class="card-kicker">ZİHİN · 2 DAKİKA <span>● ETKİLEŞİMLİ</span></div><h3>Gözün sana yalan söylüyor mu?</h3><p>İki çizgiden hangisi daha uzun? Önce tahmin et, sonra ölç. Algının bağlamdan nasıl etkilendiğini keşfet.</p><button class="open-experiment" data-open="illusion">Deneyi başlat <span>↗</span></button></div>
+    </article>
+    <article class="experiment-card" data-kind="physics">
+      <div class="card-art art-pendulum"><div class="pendulum"><i></i><b></b></div><span class="art-index">EXP / 002</span><span class="art-stamp">MOTION STUDY</span></div>
+      <div class="card-content"><div class="card-kicker">FİZİK · 3 DAKİKA <span>● SİMÜLASYON</span></div><h3>Kaosun kıyısında</h3><p>Başlangıç koşulunu çok az değiştir. İki sarkaç yörüngesinin nasıl ayrıştığını gözlemle.</p><button class="open-experiment" data-open="chaos">Deneyi başlat <span>↗</span></button></div>
+    </article>
+    <article class="experiment-card" data-kind="code">
+      <div class="card-art art-random"><canvas id="randomCanvas" aria-label="Rastgele noktalar görselleştirmesi"></canvas><span class="art-index">EXP / 003</span><span class="art-stamp">PROBABILITY</span></div>
+      <div class="card-content"><div class="card-kicker">KOD · 1 DAKİKA <span>● CANLI</span></div><h3>Rastgelelik rastgele görünür mü?</h3><p>Yazı-tura sonuçlarını üret. Kısa serilerde neden “haksızlık” hissi oluştuğunu gör.</p><button class="open-experiment" data-open="random">Deneyi başlat <span>↗</span></button></div>
+    </article>
+    <article class="experiment-card" data-kind="code">
+      <div class="card-art art-network"><div class="network-lines"></div><span class="art-index">EXP / 004</span><span class="art-stamp">NETWORK / LOCAL</span></div>
+      <div class="card-content"><div class="card-kicker">İNTERNET · 2 DAKİKA <span>● ETKİLEŞİMLİ</span></div><h3>Bir tık kaç yere gider?</h3><p>Bir web isteğinin yolculuğunu adım adım izle: tarayıcı, DNS, sunucu, yanıt. Görünmeyen sistemi görünür kıl.</p><button class="open-experiment" data-open="request">Deneyi başlat <span>↗</span></button></div>
+    </article>
+  </div>
+</section>
+
+<section class="bench-section" id="bench">
+  <div class="section-head"><div><div class="eyebrow">02 / AÇIK ÇALIŞMA MASASI</div><h2>Bir parametreyi<br><em>değiştir.</em></h2></div><p>Bu bölümde sonuç, senin seçtiğin değerlere göre anında değişir. Küçük bir deney, gerçek bir merak.</p></div>
+  <div class="bench-grid">
+    <div class="bench-panel">
+      <div class="panel-top"><span><i class="live-dot"></i> SANAL DENEY / 01</span><span>MONTE CARLO</span></div>
+      <h3>Pi sayısını rastgele bulabilir miyiz?</h3>
+      <p class="muted">Bir dairenin içine rastgele noktalar atıyoruz. Dairenin içine düşenlerin oranı, π için yaklaşık bir değer verir.</p>
+      <div class="plot-wrap"><canvas id="piCanvas" width="560" height="280" aria-label="Pi deneyi noktaları"></canvas><div class="plot-legend"><span><i class="dot-inside"></i> DAİRE İÇİ</span><span><i class="dot-outside"></i> DAİRE DIŞI</span></div></div>
+      <div class="metric-row"><div><small>TAHMİNİ π</small><strong id="piEstimate">—</strong></div><div><small>NOKTA SAYISI</small><strong id="piCount">0</strong></div><div><small>GERÇEK π</small><strong>3.14159</strong></div></div>
+      <div class="bench-actions"><button class="button primary" id="addPoints">+ 100 nokta at</button><button class="button secondary" id="resetPi">Sıfırla</button></div>
+      <p class="tiny-note">Not: Az sayıda nokta yanıltıcı olabilir. Daha çok örnek genellikle daha iyi tahmin verir, ama her seferinde kusursuz sonuç garanti değildir.</p>
+    </div>
+    <div class="bench-panel terminal-panel">
+      <div class="panel-top"><span><i class="live-dot"></i> TERMINAL / 02</span><span>SIMULATED OUTPUT</span></div>
+      <h3>Hata mesajından korkma.</h3>
+      <p class="muted">Bir sorunun çözümü çoğu zaman doğru soruyu sormakla başlar. Senaryoyu seç, teşhis sürecini çalıştır.</p>
+      <label for="scenario">VAKA SEÇ</label><select id="scenario"><option value="css">Sayfa açılıyor ama tasarım bozuk</option><option value="dns">Alan adı açılmıyor</option><option value="api">API yanıt vermiyor</option><option value="deploy">Yeni sürüm görünmüyor</option></select>
+      <button class="button primary full" id="diagnose">Teşhisi çalıştır <span>↗</span></button>
+      <div class="terminal-output" id="terminalOutput" aria-live="polite"><div class="term-line dim">ergin@lab:~$ ./diagnose --awaiting-input</div><div class="term-line">Bir vaka seç ve teşhisi başlat.</div><span class="cursor">_</span></div>
+      <div class="terminal-foot"><span>LOCAL DEMO</span><span>NO NETWORK REQUESTS</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="manifesto" id="manifesto"><div class="manifesto-symbol">“</div><div><div class="eyebrow">03 / LABORATUVAR PROTOKOLÜ</div><h2>Merak, cevaptan<br><em>daha uzun yaşar.</em></h2><p>Burada her prototipin kusursuz olması gerekmiyor. Ama neyi test ettiği, ne öğrendiği ve nerede yanıldığı açık olmalı. Bir fikri çalıştır, sonucunu gözlemle, sonra fikrini güncelle.</p><div class="protocol"><span><b>01</b> SORU SOR</span><span><b>02</b> TAHMİN ET</span><span><b>03</b> TEST ET</span><span><b>04</b> NOT AL</span></div></div></section>
+
+<section class="section fieldnotes" id="fieldnotes"><div class="section-head"><div><div class="eyebrow">04 / SAHA NOTLARI</div><h2>Kısa notlar,<br><em>uzun meraklar.</em></h2></div><p>Bir deneyin yanında, onu anlamlandıran küçük açıklamalar da olmalı.</p></div>
+<div class="notes-grid"><article class="note"><span>NOTE_001 / ALGI</span><h3>Beyin kamera değildir.</h3><p>Gördüğümüz şey yalnızca gözümüze ulaşan ışık değil; beynin bağlam, beklenti ve geçmiş deneyimle kurduğu yorumdur.</p><div class="note-bottom">OKUMA SÜRESİ 45 SN <span>↗</span></div></article><article class="note"><span>NOTE_002 / OLASILIK</span><h3>Rastgelelik düzenli görünmek zorunda değil.</h3><p>Gerçek rastgele dizilerde art arda aynı sonucun gelmesi mümkündür. “Fazla düzenli” görünen seri bazen daha az rastgele olabilir.</p><div class="note-bottom">OKUMA SÜRESİ 60 SN <span>↗</span></div></article><article class="note"><span>NOTE_003 / DEBUG</span><h3>Belirti, sebep değildir.</h3><p>Bir site açılmıyorsa sorun DNS, ağ, sunucu, uygulama veya tarayıcı önbelleği olabilir. Tek tek doğrulamak, tahmin yürütmekten iyidir.</p><div class="note-bottom">OKUMA SÜRESİ 50 SN <span>↗</span></div></article></div></section>
+</main>
+<footer><a class="brand footer-brand" href="./"><span class="brand-mark">E<span>·</span></span><span>ERGIN <b>LAB</b><small>BU LAB GELİŞMEYE DEVAM EDİYOR.</small></span></a><div class="footer-center">BUILT TO LEARN, NOT TO LOOK FINISHED.</div><a href="../">ANA SİTEYE DÖN ↑</a></footer>
+
+<div class="modal-backdrop" id="experimentModal" hidden>
+  <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-head"><span class="eyebrow" id="modalEyebrow">EXPERIMENT / 001</span><button class="modal-close" id="closeModal" aria-label="Kapat">×</button></div>
+    <h2 id="modalTitle">Deney</h2><p class="modal-intro" id="modalIntro"></p><div class="modal-body" id="modalBody"></div><div class="modal-footer"><span>ERGİN LAB · INTERACTIVE STUDY</span><button class="text-link" id="modalDone">Deneyi kapat ×</button></div>
+  </section>
+</div>
+<script src="assets/lab.js"></script>
+</body></html>
